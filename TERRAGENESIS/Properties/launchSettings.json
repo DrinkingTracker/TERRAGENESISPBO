@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TERRAGENESIS (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TERRAGENESIS (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
