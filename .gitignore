@@ -31,9 +31,6 @@ PublishScripts/
 *.coverage
 *.coveragexml
 
-# graphify knowledge-graph cache (regenerable)
-TERRAGENESIS/graphify-out/cache/
-
 # OS junk
 Thumbs.db
 .DS_Store
