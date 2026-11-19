@@ -23,6 +23,9 @@ namespace TERRAGENESIS
     {
         private Window? _window;
 
+        /// <summary>Jendela utama; dibutuhkan FileOpenPicker untuk mendapatkan handle jendela.</summary>
+        public static Window? JendelaUtama { get; private set; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -39,6 +42,7 @@ namespace TERRAGENESIS
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             _window = new MainWindow();
+            JendelaUtama = _window;
             _window.Activate();
         }
     }

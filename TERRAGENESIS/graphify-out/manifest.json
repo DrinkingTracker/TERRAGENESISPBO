@@ -1,0 +1,560 @@
+{
+  "App.xaml": {
+    "mtime": 1795023816.0,
+    "seen": 1795106502.993275,
+    "ast_hash": "dd6f798b51d4a99bb5462acb5bd9370a",
+    "semantic_hash": "dd6f798b51d4a99bb5462acb5bd9370a"
+  },
+  "App.xaml.cs": {
+    "mtime": 1795023820.0,
+    "seen": 1795106502.9932806,
+    "ast_hash": "9a1ad8e29d42945c301d514cd9d228f1",
+    "semantic_hash": "9a1ad8e29d42945c301d514cd9d228f1"
+  },
+  "Controls/LahanCard.xaml": {
+    "mtime": 1795091406.074682,
+    "seen": 1795106502.9932833,
+    "ast_hash": "6184c4a1565504b82d7eb3474297097c",
+    "semantic_hash": "6184c4a1565504b82d7eb3474297097c"
+  },
+  "Controls/LahanCard.xaml.cs": {
+    "mtime": 1795090922.2887406,
+    "seen": 1795106502.9932847,
+    "ast_hash": "71b7a0b0e0e53c6a715a05d25aa92cea",
+    "semantic_hash": "71b7a0b0e0e53c6a715a05d25aa92cea"
+  },
+  "Controls/NavbarControl.xaml": {
+    "mtime": 1795090922.2967412,
+    "seen": 1795106502.9932857,
+    "ast_hash": "29fe49a12533b3c485fe55bf06caf76b",
+    "semantic_hash": "29fe49a12533b3c485fe55bf06caf76b"
+  },
+  "Controls/NavbarControl.xaml.cs": {
+    "mtime": 1795090922.260428,
+    "seen": 1795106502.9932866,
+    "ast_hash": "2850a72d03f64041da496f296cd8593d",
+    "semantic_hash": "2850a72d03f64041da496f296cd8593d"
+  },
+  "MainPage.xaml": {
+    "mtime": 1795023818.0,
+    "seen": 1795106502.9932876,
+    "ast_hash": "e430520ae9ffb45c43faefbef9f59ea1",
+    "semantic_hash": "e430520ae9ffb45c43faefbef9f59ea1"
+  },
+  "MainPage.xaml.cs": {
+    "mtime": 1795023818.0,
+    "seen": 1795106502.9932888,
+    "ast_hash": "4ab9a50ebdb89cef321ec6099ab996b6",
+    "semantic_hash": "4ab9a50ebdb89cef321ec6099ab996b6"
+  },
+  "MainWindow.xaml": {
+    "mtime": 1795070336.2791555,
+    "seen": 1795106502.9932897,
+    "ast_hash": "c60797ec8fa6d34c2c9aed36b3bb0aba",
+    "semantic_hash": "c60797ec8fa6d34c2c9aed36b3bb0aba"
+  },
+  "MainWindow.xaml.cs": {
+    "mtime": 1795091019.7054915,
+    "seen": 1795106502.9932904,
+    "ast_hash": "d8012295038796aa77904a34e56e2a98",
+    "semantic_hash": "d8012295038796aa77904a34e56e2a98"
+  },
+  "Pages/BerandaPage.xaml": {
+    "mtime": 1795090922.32574,
+    "seen": 1795106502.9932914,
+    "ast_hash": "fe7f500b13e2f5bf95ab503d48218196",
+    "semantic_hash": "fe7f500b13e2f5bf95ab503d48218196"
+  },
+  "Pages/BerandaPage.xaml.cs": {
+    "mtime": 1795091166.4751055,
+    "seen": 1795106502.9932923,
+    "ast_hash": "b90870a5c1363885f65cc67a1028135f",
+    "semantic_hash": "b90870a5c1363885f65cc67a1028135f"
+  },
+  "Pages/LoginPage.xaml": {
+    "mtime": 1795076012.2853563,
+    "seen": 1795106502.9932933,
+    "ast_hash": "cd083fe7bdfc5493d9dfe320681e8a4e",
+    "semantic_hash": "cd083fe7bdfc5493d9dfe320681e8a4e"
+  },
+  "Pages/LoginPage.xaml.cs": {
+    "mtime": 1795073732.6048949,
+    "seen": 1795106502.993294,
+    "ast_hash": "267c30e97cb797a5e922892cd6c66176",
+    "semantic_hash": "267c30e97cb797a5e922892cd6c66176"
+  },
+  "Properties/launchSettings.json": {
+    "mtime": 1795023816.0,
+    "seen": 1795106502.9932952,
+    "ast_hash": "7611852cfa7e079fb9d7bb3330af71b4",
+    "semantic_hash": "7611852cfa7e079fb9d7bb3330af71b4"
+  },
+  "TERRAGENESIS.csproj": {
+    "mtime": 1795090922.3401682,
+    "seen": 1795106502.993296,
+    "ast_hash": "d0a610a8e81660d3bee3a62b37b71da4",
+    "semantic_hash": "d0a610a8e81660d3bee3a62b37b71da4"
+  },
+  "schema.sql": {
+    "mtime": 1795105418.7591467,
+    "seen": 1795106502.9932966,
+    "ast_hash": "d7811964b43fea24b5474222e22b2439",
+    "semantic_hash": "d7811964b43fea24b5474222e22b2439"
+  },
+  "Assets/Dashboard admin/info.md": {
+    "mtime": 1795105221.0098732,
+    "seen": 1795106502.9932976,
+    "ast_hash": "252657eed9bbe90134214c621eac454e",
+    "semantic_hash": "252657eed9bbe90134214c621eac454e"
+  },
+  "Assets/Donasi/note.md": {
+    "mtime": 1795094742.5407553,
+    "seen": 1795106502.9932985,
+    "ast_hash": "8d892579d2cbe130048db910fdbb1986",
+    "semantic_hash": "8d892579d2cbe130048db910fdbb1986"
+  },
+  "Assets/Lahan/note.md": {
+    "mtime": 1795094015.441484,
+    "seen": 1795106502.9932992,
+    "ast_hash": "9bd065ea2c627aaa4f1e2bfad8443b3e",
+    "semantic_hash": "9bd065ea2c627aaa4f1e2bfad8443b3e"
+  },
+  "Assets/checkpoint 2.md": {
+    "mtime": 1795065233.3414862,
+    "seen": 1795106502.9933002,
+    "ast_hash": "f86ea3cf866c8a58d48759f414885b14",
+    "semantic_hash": "f86ea3cf866c8a58d48759f414885b14"
+  },
+  "Assets/checkpoint 3.md": {
+    "mtime": 1795082724.4233122,
+    "seen": 1795106502.993301,
+    "ast_hash": "11dc5ce36c01a1a9f103daacd0ef1736",
+    "semantic_hash": "11dc5ce36c01a1a9f103daacd0ef1736"
+  },
+  "Assets/checkpoint 4.md": {
+    "mtime": 1795091945.1830935,
+    "seen": 1795106502.993302,
+    "ast_hash": "c8d4ae2e58e01105e0cb063ee21f55ed",
+    "semantic_hash": "c8d4ae2e58e01105e0cb063ee21f55ed"
+  },
+  "Assets/detaillahan/note.md": {
+    "mtime": 1795094015.441484,
+    "seen": 1795106502.9933028,
+    "ast_hash": "9bd065ea2c627aaa4f1e2bfad8443b3e",
+    "semantic_hash": "9bd065ea2c627aaa4f1e2bfad8443b3e"
+  },
+  "catatan.md": {
+    "mtime": 1795105406.4054067,
+    "seen": 1795106502.9933057,
+    "ast_hash": "123baa0c6792ffe9eeb1787d11a3ceab",
+    "semantic_hash": "123baa0c6792ffe9eeb1787d11a3ceab"
+  },
+  "Assets/Dashboard admin/Dashboard Admin sample.png": {
+    "mtime": 1795105105.7213237,
+    "seen": 1795106502.9933066,
+    "ast_hash": "dcc3cf626b4c4b35f18414daa0e66724",
+    "semantic_hash": "dcc3cf626b4c4b35f18414daa0e66724"
+  },
+  "Assets/Dashboard admin/Kelola donasi sample.png": {
+    "mtime": 1795105130.6005936,
+    "seen": 1795106502.9933074,
+    "ast_hash": "b5f3d8ec9c54e5214af2dece426facbd",
+    "semantic_hash": "b5f3d8ec9c54e5214af2dece426facbd"
+  },
+  "Assets/Dashboard admin/Kelola lahan sample.png": {
+    "mtime": 1795105120.520542,
+    "seen": 1795106502.9933083,
+    "ast_hash": "f613a0e6cd5a59f3174dd83441cc5284",
+    "semantic_hash": "f613a0e6cd5a59f3174dd83441cc5284"
+  },
+  "Assets/Dashboard admin/riwayat penanaman sample.png": {
+    "mtime": 1795105147.349127,
+    "seen": 1795106502.9933093,
+    "ast_hash": "0fbc09a964455df586198685dbb23ee1",
+    "semantic_hash": "0fbc09a964455df586198685dbb23ee1"
+  },
+  "Assets/Donasi/Donasi sample.png": {
+    "mtime": 1795094137.460179,
+    "seen": 1795106502.99331,
+    "ast_hash": "9271db95ebf9fe497818001ae3639231",
+    "semantic_hash": "9271db95ebf9fe497818001ae3639231"
+  },
+  "Assets/Donasi/aleritcon.png": {
+    "mtime": 1795094519.4118268,
+    "seen": 1795106502.9933107,
+    "ast_hash": "486e7f84db74e5a7e893f04ab6635c6f",
+    "semantic_hash": "486e7f84db74e5a7e893f04ab6635c6f"
+  },
+  "Assets/Donasi/arrowicon.png": {
+    "mtime": 1795094458.633557,
+    "seen": 1795106502.9933116,
+    "ast_hash": "cef22fe8246c2df6d2e08eba8341212b",
+    "semantic_hash": "cef22fe8246c2df6d2e08eba8341212b"
+  },
+  "Assets/Donasi/bankicon.png": {
+    "mtime": 1795094378.573927,
+    "seen": 1795106502.9933126,
+    "ast_hash": "277e28102b5c7f41d8bc8fef7a762a21",
+    "semantic_hash": "277e28102b5c7f41d8bc8fef7a762a21"
+  },
+  "Assets/Donasi/jawatimur.png": {
+    "mtime": 1795094310.1052125,
+    "seen": 1795106502.9933136,
+    "ast_hash": "da447501ebeb00923c032c2620148b19",
+    "semantic_hash": "da447501ebeb00923c032c2620148b19"
+  },
+  "Assets/Donasi/kalimantan.jpeg": {
+    "mtime": 1795094621.6134894,
+    "seen": 1795106502.9933143,
+    "ast_hash": "4b82308a00833f3d876fe75540182075",
+    "semantic_hash": "4b82308a00833f3d876fe75540182075"
+  },
+  "Assets/Donasi/logo.png": {
+    "mtime": 1795073246.800228,
+    "seen": 1795106502.9933152,
+    "ast_hash": "a383633dac7329c234511e3ddaae642a",
+    "semantic_hash": "a383633dac7329c234511e3ddaae642a"
+  },
+  "Assets/Donasi/profile.png": {
+    "mtime": 1795089699.8260329,
+    "seen": 1795106502.9933162,
+    "ast_hash": "b9875548351443b0d112f6420d625088",
+    "semantic_hash": "b9875548351443b0d112f6420d625088"
+  },
+  "Assets/Donasi/qricon.png": {
+    "mtime": 1795094424.5230987,
+    "seen": 1795106502.993317,
+    "ast_hash": "f016ec45dca10700f7a625932ba07c59",
+    "semantic_hash": "f016ec45dca10700f7a625932ba07c59"
+  },
+  "Assets/Donasi/sumaterautara.jpeg": {
+    "mtime": 1795094626.1454494,
+    "seen": 1795106502.9933178,
+    "ast_hash": "fa8aea5292863518c7e70aed87b8552f",
+    "semantic_hash": "fa8aea5292863518c7e70aed87b8552f"
+  },
+  "Assets/Donasi/uploadicon.png": {
+    "mtime": 1795094587.9867487,
+    "seen": 1795106502.9933186,
+    "ast_hash": "93ee2acc555a5de0437774d58286d744",
+    "semantic_hash": "93ee2acc555a5de0437774d58286d744"
+  },
+  "Assets/Donasi/walleticon.png": {
+    "mtime": 1795094404.7215397,
+    "seen": 1795106502.9933195,
+    "ast_hash": "9aa015a06f8cb9e3d47baa598839bfee",
+    "semantic_hash": "9aa015a06f8cb9e3d47baa598839bfee"
+  },
+  "Assets/Lahan/lahan sample.png": {
+    "mtime": 1795093329.6402953,
+    "seen": 1795106502.9933202,
+    "ast_hash": "f0aca2ea075b1b954f867e996fdf787b",
+    "semantic_hash": "f0aca2ea075b1b954f867e996fdf787b"
+  },
+  "Assets/Lahan/treeicon.png": {
+    "mtime": 1795093210.169451,
+    "seen": 1795106502.9933212,
+    "ast_hash": "4278a5c3f4877d4be1a76ba06b58ce40",
+    "semantic_hash": "4278a5c3f4877d4be1a76ba06b58ce40"
+  },
+  "Assets/LockScreenLogo.scale-200.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933226,
+    "ast_hash": "5807f9cd54b7d3a60edde4be852d3565",
+    "semantic_hash": "5807f9cd54b7d3a60edde4be852d3565"
+  },
+  "Assets/PetaWilayah/Peta wilayah sample.png": {
+    "mtime": 1795092852.848976,
+    "seen": 1795106502.9933233,
+    "ast_hash": "7ccdbc0b7168f62b1c71689203fac790",
+    "semantic_hash": "7ccdbc0b7168f62b1c71689203fac790"
+  },
+  "Assets/PetaWilayah/logo.png": {
+    "mtime": 1795073246.800228,
+    "seen": 1795106502.9933243,
+    "ast_hash": "a383633dac7329c234511e3ddaae642a",
+    "semantic_hash": "a383633dac7329c234511e3ddaae642a"
+  },
+  "Assets/PetaWilayah/peta.svg": {
+    "mtime": 1793794390.0,
+    "seen": 1795106502.993325,
+    "ast_hash": "87f180c54f2ce3fbb8a444a2981cdc72",
+    "semantic_hash": "87f180c54f2ce3fbb8a444a2981cdc72"
+  },
+  "Assets/PetaWilayah/profile.png": {
+    "mtime": 1795089699.8260329,
+    "seen": 1795106502.9933257,
+    "ast_hash": "b9875548351443b0d112f6420d625088",
+    "semantic_hash": "b9875548351443b0d112f6420d625088"
+  },
+  "Assets/SplashScreen.scale-200.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933267,
+    "ast_hash": "4e1144b1fe897a4d60fea4d9d3777556",
+    "semantic_hash": "4e1144b1fe897a4d60fea4d9d3777556"
+  },
+  "Assets/Square150x150Logo.scale-200.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933274,
+    "ast_hash": "6faba75d1f817fc5696a54badb4c9fbb",
+    "semantic_hash": "6faba75d1f817fc5696a54badb4c9fbb"
+  },
+  "Assets/Square44x44Logo.scale-200.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933283,
+    "ast_hash": "cf1e1f33567766615f1d3c813ba85c16",
+    "semantic_hash": "cf1e1f33567766615f1d3c813ba85c16"
+  },
+  "Assets/Square44x44Logo.targetsize-24_altform-unplated.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.993329,
+    "ast_hash": "32e7726aab9962e11346a8fc90328e64",
+    "semantic_hash": "32e7726aab9962e11346a8fc90328e64"
+  },
+  "Assets/Square44x44Logo.targetsize-48_altform-lightunplated.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.99333,
+    "ast_hash": "6b83cfa58f2599e0d0cafd4d3bd16479",
+    "semantic_hash": "6b83cfa58f2599e0d0cafd4d3bd16479"
+  },
+  "Assets/StoreLogo.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933307,
+    "ast_hash": "5b53c3ecf5f9b1013cb64486ce6dcb4e",
+    "semantic_hash": "5b53c3ecf5f9b1013cb64486ce6dcb4e"
+  },
+  "Assets/Wide310x150Logo.scale-200.png": {
+    "mtime": 1795023170.0,
+    "seen": 1795106502.9933317,
+    "ast_hash": "abcda9caed8b376564b78d045eec0850",
+    "semantic_hash": "abcda9caed8b376564b78d045eec0850"
+  },
+  "Assets/beranda/Frame 9.png": {
+    "mtime": 1795089699.8470137,
+    "seen": 1795106502.9933324,
+    "ast_hash": "ed2db8020b3fa8b90759aa3b6263d4a9",
+    "semantic_hash": "ed2db8020b3fa8b90759aa3b6263d4a9"
+  },
+  "Assets/beranda/daun.png": {
+    "mtime": 1795089699.8680124,
+    "seen": 1795106502.9933333,
+    "ast_hash": "31e75ebc256f26e92c44debaa4033181",
+    "semantic_hash": "31e75ebc256f26e92c44debaa4033181"
+  },
+  "Assets/beranda/donatur.png": {
+    "mtime": 1795089699.8610287,
+    "seen": 1795106502.9933343,
+    "ast_hash": "049148b11af1c3e6f0c89582a29c78d8",
+    "semantic_hash": "049148b11af1c3e6f0c89582a29c78d8"
+  },
+  "Assets/beranda/jawatimur.png": {
+    "mtime": 1795089699.8750129,
+    "seen": 1795106502.993335,
+    "ast_hash": "a9afae7a4fce12a428cac45db81f1325",
+    "semantic_hash": "a9afae7a4fce12a428cac45db81f1325"
+  },
+  "Assets/beranda/kalimantan.png": {
+    "mtime": 1795089699.8830113,
+    "seen": 1795106502.9933357,
+    "ast_hash": "6e6253984d706663ac09c5e5978c25fe",
+    "semantic_hash": "6e6253984d706663ac09c5e5978c25fe"
+  },
+  "Assets/beranda/logo.png": {
+    "mtime": 1795073246.800228,
+    "seen": 1795106502.9933367,
+    "ast_hash": "a383633dac7329c234511e3ddaae642a",
+    "semantic_hash": "a383633dac7329c234511e3ddaae642a"
+  },
+  "Assets/beranda/pin.png": {
+    "mtime": 1795091274.1649246,
+    "seen": 1795106502.9933374,
+    "ast_hash": "db0efa513ce0b45ccc0316dfd284cda5",
+    "semantic_hash": "db0efa513ce0b45ccc0316dfd284cda5"
+  },
+  "Assets/beranda/pohon.png": {
+    "mtime": 1795089699.8540127,
+    "seen": 1795106502.993338,
+    "ast_hash": "fc2a7f529dcc4f7779d70086e1f4836d",
+    "semantic_hash": "fc2a7f529dcc4f7779d70086e1f4836d"
+  },
+  "Assets/beranda/profile.png": {
+    "mtime": 1795089699.8260329,
+    "seen": 1795106502.9933388,
+    "ast_hash": "b9875548351443b0d112f6420d625088",
+    "semantic_hash": "b9875548351443b0d112f6420d625088"
+  },
+  "Assets/beranda/sampel beranda.png": {
+    "mtime": 1795089889.0723898,
+    "seen": 1795106502.99334,
+    "ast_hash": "65b711cf4b46d477b42ffc5cf09efad4",
+    "semantic_hash": "65b711cf4b46d477b42ffc5cf09efad4"
+  },
+  "Assets/beranda/sumaterautara.png": {
+    "mtime": 1795089699.8900292,
+    "seen": 1795106502.9933407,
+    "ast_hash": "584f8e8ddbec06ed4701d6f8c2917002",
+    "semantic_hash": "584f8e8ddbec06ed4701d6f8c2917002"
+  },
+  "Assets/detaillahan/detaillahan sample.png": {
+    "mtime": 1795095129.9744911,
+    "seen": 1795106502.9933414,
+    "ast_hash": "dd8a313e315f254d57b5c3c4e51cfe8a",
+    "semantic_hash": "dd8a313e315f254d57b5c3c4e51cfe8a"
+  },
+  "Assets/detaillahan/treeicon.png": {
+    "mtime": 1795093210.169451,
+    "seen": 1795106502.9933422,
+    "ast_hash": "4278a5c3f4877d4be1a76ba06b58ce40",
+    "semantic_hash": "4278a5c3f4877d4be1a76ba06b58ce40"
+  },
+  "Assets/login/LoginBackground.jpeg": {
+    "mtime": 1795071522.2084506,
+    "seen": 1795106502.9933429,
+    "ast_hash": "2d5e6bef3e604d7ffb1aea0d9b92fae1",
+    "semantic_hash": "2d5e6bef3e604d7ffb1aea0d9b92fae1"
+  },
+  "Assets/login/eye-off.png": {
+    "mtime": 1795074969.0765078,
+    "seen": 1795106502.9933438,
+    "ast_hash": "a6a9c0a5bcc9c52fbf65a1ad43fcf2a8",
+    "semantic_hash": "a6a9c0a5bcc9c52fbf65a1ad43fcf2a8"
+  },
+  "Assets/login/eye.png": {
+    "mtime": 1795074969.0644898,
+    "seen": 1795106502.9933448,
+    "ast_hash": "a60bb2ee857743a37e2d6e3d14d87e59",
+    "semantic_hash": "a60bb2ee857743a37e2d6e3d14d87e59"
+  },
+  "Assets/login/leaf.png": {
+    "mtime": 1795071506.2431808,
+    "seen": 1795106502.9933455,
+    "ast_hash": "dbb493eb6ce6ebef3b5091915167d038",
+    "semantic_hash": "dbb493eb6ce6ebef3b5091915167d038"
+  },
+  "Assets/login/login-arrow.png": {
+    "mtime": 1795074969.08749,
+    "seen": 1795106502.9933465,
+    "ast_hash": "9716f41c7336ecdd57a0338db25137bc",
+    "semantic_hash": "9716f41c7336ecdd57a0338db25137bc"
+  },
+  "Assets/login/logo.png": {
+    "mtime": 1795073246.800228,
+    "seen": 1795106502.9933472,
+    "ast_hash": "a383633dac7329c234511e3ddaae642a",
+    "semantic_hash": "a383633dac7329c234511e3ddaae642a"
+  },
+  "Assets/login/padlock.png": {
+    "mtime": 1795072395.5770009,
+    "seen": 1795106502.9933481,
+    "ast_hash": "a59d86a5e7fab3a47c3fc34990732034",
+    "semantic_hash": "a59d86a5e7fab3a47c3fc34990732034"
+  },
+  "Assets/login/sample login.png": {
+    "mtime": 1795071501.4316764,
+    "seen": 1795106502.9933488,
+    "ast_hash": "145925fd91891f0224c34e614cbdaee2",
+    "semantic_hash": "145925fd91891f0224c34e614cbdaee2"
+  },
+  "Assets/login/user.png": {
+    "mtime": 1795072399.561151,
+    "seen": 1795106502.9933498,
+    "ast_hash": "eeb7d332017343731ce45fdd17c46ccf",
+    "semantic_hash": "eeb7d332017343731ce45fdd17c46ccf"
+  },
+  "Assets/user/Donasi Saya sample.png": {
+    "mtime": 1795095658.3389015,
+    "seen": 1795106502.9933507,
+    "ast_hash": "4c6a20601680f8a9b20a7438e13bc1c3",
+    "semantic_hash": "4c6a20601680f8a9b20a7438e13bc1c3"
+  },
+  "Assets/user/Pesanan saya sample.png": {
+    "mtime": 1795095670.8494563,
+    "seen": 1795106502.9933517,
+    "ast_hash": "06a12e9dcc52931bc59cd45d4eacd371",
+    "semantic_hash": "06a12e9dcc52931bc59cd45d4eacd371"
+  },
+  "Assets/user/Profile sample.png": {
+    "mtime": 1795095643.9710975,
+    "seen": 1795106502.9933524,
+    "ast_hash": "ae66687dd9087e2cbb49d26944bc78b6",
+    "semantic_hash": "ae66687dd9087e2cbb49d26944bc78b6"
+  },
+  "Assets/user/alerticon.png": {
+    "mtime": 1795096061.6684387,
+    "seen": 1795106502.9933531,
+    "ast_hash": "486e7f84db74e5a7e893f04ab6635c6f",
+    "semantic_hash": "486e7f84db74e5a7e893f04ab6635c6f"
+  },
+  "Assets/user/dollaricon.png": {
+    "mtime": 1795095997.8438573,
+    "seen": 1795106502.993354,
+    "ast_hash": "a245c9e49eccb2af86fff3e26e3a7380",
+    "semantic_hash": "a245c9e49eccb2af86fff3e26e3a7380"
+  },
+  "Assets/user/handicon1.png": {
+    "mtime": 1795095773.585125,
+    "seen": 1795106502.993355,
+    "ast_hash": "2887a468ddd1b8001fc5ab59e50cee6f",
+    "semantic_hash": "2887a468ddd1b8001fc5ab59e50cee6f"
+  },
+  "Assets/user/handicon2.png": {
+    "mtime": 1795095790.7305055,
+    "seen": 1795106502.9933558,
+    "ast_hash": "3e6de37c379ef43bae1028e192f50438",
+    "semantic_hash": "3e6de37c379ef43bae1028e192f50438"
+  },
+  "Assets/user/leaf.png": {
+    "mtime": 1795096157.0755847,
+    "seen": 1795106502.9933567,
+    "ast_hash": "91bb73e7d40325de2789775ac4f46c86",
+    "semantic_hash": "91bb73e7d40325de2789775ac4f46c86"
+  },
+  "Assets/user/logo.png": {
+    "mtime": 1795073246.800228,
+    "seen": 1795106502.993358,
+    "ast_hash": "a383633dac7329c234511e3ddaae642a",
+    "semantic_hash": "a383633dac7329c234511e3ddaae642a"
+  },
+  "Assets/user/logout.png": {
+    "mtime": 1795095803.585152,
+    "seen": 1795106502.9933596,
+    "ast_hash": "4e6d899020533a903c8b8f159f946bb5",
+    "semantic_hash": "4e6d899020533a903c8b8f159f946bb5"
+  },
+  "Assets/user/pfp.png": {
+    "mtime": 1795095822.5438268,
+    "seen": 1795106502.9933608,
+    "ast_hash": "c4bef8b9552618fa163b12df4816b392",
+    "semantic_hash": "c4bef8b9552618fa163b12df4816b392"
+  },
+  "Assets/user/profileicon.png": {
+    "mtime": 1795095745.7628582,
+    "seen": 1795106502.9933615,
+    "ast_hash": "cfb1303dbfe5c304d69d443d1e0001f2",
+    "semantic_hash": "cfb1303dbfe5c304d69d443d1e0001f2"
+  },
+  "Assets/user/propagule.png": {
+    "mtime": 1795096177.899259,
+    "seen": 1795106502.9933622,
+    "ast_hash": "2eff5cb5d717ffde4161eed0b957d82d",
+    "semantic_hash": "2eff5cb5d717ffde4161eed0b957d82d"
+  },
+  "Assets/user/seedicon.png": {
+    "mtime": 1795096013.8582175,
+    "seen": 1795106502.9933631,
+    "ast_hash": "06e65d1bb42fdbbb7e49bb120313dacf",
+    "semantic_hash": "06e65d1bb42fdbbb7e49bb120313dacf"
+  },
+  "Assets/user/treeicon.png": {
+    "mtime": 1795095982.89938,
+    "seen": 1795106502.9933639,
+    "ast_hash": "59fefef8191ff58115bb576f9edabee8",
+    "semantic_hash": "59fefef8191ff58115bb576f9edabee8"
+  },
+  "Assets/user/uploadicon.png": {
+    "mtime": 1795094587.9867487,
+    "seen": 1795106502.993365,
+    "ast_hash": "93ee2acc555a5de0437774d58286d744",
+    "semantic_hash": "93ee2acc555a5de0437774d58286d744"
+  }
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TERRAGENESIS.Pages.LahanPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:TERRAGENESIS.Controls"
+    Background="White">
+
+    <Page.Resources>
+        <FontFamily x:Key="FontBlack">Segoe UI Black</FontFamily>
+        <FontFamily x:Key="FontIsi">Segoe UI</FontFamily>
+
+        <Style x:Key="LabelKecil" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontIsi}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CharacterSpacing" Value="80"/>
+            <Setter Property="Foreground" Value="#5F7A6D"/>
+        </Style>
+        <Style x:Key="IsiPopup" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontIsi}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#12352A"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+
+    <!-- Kanvas 1440 x 1024 (Figma: Lahan 5:187 dan pop-up 5:817) -->
+    <Viewbox Stretch="Uniform">
+        <Canvas x:Name="Kanvas" Width="1440" Height="1024" Background="White">
+
+            <controls:NavbarControl Canvas.Left="0" Canvas.Top="0"
+                                    ActivePage="Lahan"
+                                    NavigateRequested="Navbar_NavigateRequested"/>
+
+            <!-- Peta di belakang kartu, digelapkan seperti di Figma -->
+            <Image Source="ms-appx:///Assets/PetaWilayah/peta.svg"
+                   Canvas.Left="0" Canvas.Top="305" Width="1440" Height="530" Stretch="Fill"/>
+            <Rectangle Canvas.Left="0" Canvas.Top="0" Width="1440" Height="1024"
+                       Fill="#73000000" IsHitTestVisible="False"/>
+
+            <!-- Kartu utama 1133 x 801 -->
+            <Border x:Name="Kartu" Canvas.Left="153" Canvas.Top="146" Width="1133" Height="801"
+                    CornerRadius="30" Background="White">
+                <Canvas x:Name="IsiKartu" Background="Transparent" Tapped="IsiKartu_Tapped">
+
+                    <HyperlinkButton Canvas.Left="28" Canvas.Top="18" Padding="8,4"
+                                     Click="Kembali_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <FontIcon Glyph="&#xE72B;" FontSize="16" Foreground="#3F6A55"/>
+                            <TextBlock Text="Kembali ke peta" FontFamily="{StaticResource FontIsi}"
+                                       FontSize="16" FontWeight="Medium" Foreground="#3F6A55"/>
+                        </StackPanel>
+                    </HyperlinkButton>
+
+                    <TextBlock x:Name="TxtWilayah" Canvas.Left="36" Canvas.Top="54"
+                               FontFamily="{StaticResource FontBlack}" FontSize="46" Foreground="#12352A"/>
+                    <TextBlock Canvas.Left="36" Canvas.Top="114"
+                               Text="Pilih satu petak kosong untuk menanam pohonmu."
+                               FontFamily="{StaticResource FontIsi}" FontSize="18" Foreground="#5F7A6D"/>
+
+                    <!-- Grid 10 x 10, petak 52 x 52 dengan jarak 8 (diisi dari code-behind) -->
+                    <Canvas x:Name="GridPetak" Canvas.Left="36" Canvas.Top="171" Width="592" Height="592"/>
+
+                    <!-- Ringkasan petak -->
+                    <Border Canvas.Left="736" Canvas.Top="171" Width="340" Height="306"
+                            CornerRadius="24" BorderBrush="#E3EAE5" BorderThickness="1" Background="White">
+                        <Canvas>
+                            <TextBlock Canvas.Left="28" Canvas.Top="28" Text="RINGKASAN PETAK"
+                                       Style="{StaticResource LabelKecil}"/>
+                            <StackPanel Canvas.Left="28" Canvas.Top="60" Orientation="Horizontal" Spacing="10">
+                                <TextBlock x:Name="TxtTerisi" Text="0"
+                                           FontFamily="{StaticResource FontIsi}" FontSize="46" FontWeight="Bold"
+                                           Foreground="#12352A"/>
+                                <TextBlock Text="/ 100 petak terisi" VerticalAlignment="Bottom" Margin="0,0,0,10"
+                                           FontFamily="{StaticResource FontIsi}" FontSize="16" Foreground="#5F7A6D"/>
+                            </StackPanel>
+                            <ProgressBar x:Name="BarTerisi" Canvas.Left="28" Canvas.Top="140"
+                                         Width="284" Height="10" MinHeight="10" Maximum="100" Value="0"
+                                         CornerRadius="5" Foreground="#35C86A" Background="#E1E8E3"/>
+
+                            <Border Canvas.Left="28" Canvas.Top="176" Width="32" Height="32"
+                                    CornerRadius="8" Background="#E8EEDF" BorderBrush="#D7E3CC" BorderThickness="1"/>
+                            <TextBlock Canvas.Left="72" Canvas.Top="176" Width="230" TextWrapping="Wrap"
+                                       Text="Petak kosong — klik untuk menanam pohon"
+                                       FontFamily="{StaticResource FontIsi}" FontSize="16" Foreground="#12352A"/>
+
+                            <Border Canvas.Left="28" Canvas.Top="238" Width="32" Height="32"
+                                    CornerRadius="8" Background="#CDEFD3" BorderBrush="#9ED9A9" BorderThickness="1">
+                                <Image Source="ms-appx:///Assets/Lahan/treeicon.png" Width="16" Height="16"/>
+                            </Border>
+                            <TextBlock Canvas.Left="72" Canvas.Top="238" Width="230" TextWrapping="Wrap"
+                                       Text="Sudah ditanami — klik untuk melihat detail"
+                                       FontFamily="{StaticResource FontIsi}" FontSize="16" Foreground="#12352A"/>
+                        </Canvas>
+                    </Border>
+
+                    <!-- Tombol Pilih Area: aktif setelah petak kosong dipilih -->
+                    <Button x:Name="BtnPilihArea" Canvas.Left="740" Canvas.Top="505"
+                            Width="334" Height="50" CornerRadius="16" Padding="0"
+                            HorizontalContentAlignment="Center" IsEnabled="False"
+                            Click="BtnPilihArea_Click">
+                        <Button.Resources>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#25442B"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F5636"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1B3320"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="#9DB0A2"/>
+                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                        </Button.Resources>
+                        <TextBlock x:Name="TxtPilihArea" Text="Pilih Area"
+                                   FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Bold"/>
+                    </Button>
+
+                    <!-- Pop-up "Pohon Harapan" untuk petak terisi -->
+                    <Border x:Name="PopupDetail" Width="320" Padding="26,24" CornerRadius="20"
+                            Background="White" BorderBrush="#E3EAE5" BorderThickness="1"
+                            Visibility="Collapsed" Tapped="PopupDetail_Tapped">
+                        <StackPanel Spacing="14">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Border Width="44" Height="44" CornerRadius="22" Background="#E5F4E8">
+                                    <Image Source="ms-appx:///Assets/Lahan/treeicon.png" Width="20" Height="20"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Pohon Harapan" FontFamily="{StaticResource FontIsi}"
+                                               FontSize="19" FontWeight="Bold" Foreground="#12352A"/>
+                                    <TextBlock x:Name="TxtPopupStatus" FontFamily="{StaticResource FontIsi}"
+                                               FontSize="16" Foreground="#2E9B47"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="TANGGAL DONASI" Style="{StaticResource LabelKecil}"/>
+                                <TextBlock x:Name="TxtPopupTanggal" Style="{StaticResource IsiPopup}"/>
+                            </StackPanel>
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="NAMA DONATUR" Style="{StaticResource LabelKecil}"/>
+                                <TextBlock x:Name="TxtPopupNama" Style="{StaticResource IsiPopup}"/>
+                            </StackPanel>
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="LOKASI PENANAMAN" Style="{StaticResource LabelKecil}"/>
+                                <TextBlock x:Name="TxtPopupLokasi" Style="{StaticResource IsiPopup}"/>
+                            </StackPanel>
+
+                            <Border x:Name="KotakPesan" CornerRadius="14" Background="#F1F6EF" Padding="16,14">
+                                <StackPanel Spacing="6">
+                                    <TextBlock Text="PESAN DARI DONATUR" Style="{StaticResource LabelKecil}"/>
+                                    <TextBlock x:Name="TxtPopupPesan" Style="{StaticResource IsiPopup}"
+                                               FontSize="16" LineHeight="23"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </Canvas>
+            </Border>
+        </Canvas>
+    </Viewbox>
+</Page>

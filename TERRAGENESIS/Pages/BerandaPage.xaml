@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TERRAGENESIS.Pages.BerandaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:TERRAGENESIS.Controls"
+    Background="White">
+
+    <Page.Resources>
+        <!-- Font sementara. Ganti bila font Figma sudah dipasang:
+             FontBlack -> Gotham Black, FontIsi -> Plus Jakarta Sans -->
+        <FontFamily x:Key="FontBlack">Segoe UI Black</FontFamily>
+        <FontFamily x:Key="FontIsi">Segoe UI</FontFamily>
+    </Page.Resources>
+
+    <!-- Kanvas 1440 x 1024 = ukuran frame Beranda di Figma (1:7), sama seperti LoginPage -->
+    <Viewbox Stretch="Uniform">
+        <Canvas x:Name="Kanvas" Width="1440" Height="1024" Background="White">
+
+            <!-- Navbar (Figma: Group 1 3:14) -->
+            <controls:NavbarControl Canvas.Left="0" Canvas.Top="0"
+                                    ActivePage="Beranda"
+                                    NavigateRequested="Navbar_NavigateRequested"/>
+
+            <!-- Latar hero: ekspor datar dari Frame 9 (23:64), sudah termasuk lapisan hijau -->
+            <Image Source="ms-appx:///Assets/beranda/Frame%209.png"
+                   Canvas.Left="0" Canvas.Top="131" Width="1440" Height="429"
+                   Stretch="UniformToFill"/>
+
+            <!-- Judul hero (Figma 4:18, Gotham Black 58) -->
+            <TextBlock Canvas.Left="84" Canvas.Top="176"
+                       FontFamily="{StaticResource FontBlack}" FontSize="58" LineHeight="64"
+                       Foreground="#122F20">
+                <Run Text="Satu Pilihan,"/><LineBreak/><Run Text="Tumbuhkan "/><Run Text="Kehidupan" Foreground="#48D53B"/>
+            </TextBlock>
+
+            <!-- Paragraf (Figma 4:19, Plus Jakarta Sans ExtraBold 24) -->
+            <TextBlock Canvas.Left="84" Canvas.Top="321" Width="640"
+                       FontFamily="{StaticResource FontIsi}" FontSize="24" FontWeight="ExtraBold"
+                       LineHeight="30" Foreground="Black">
+                <Run Text="Bersama TERRAGENESIS, wujudkan"/><LineBreak/><Run Text="penghijauan untuk masa depan bumi"/><LineBreak/><Run Text="melalui donasi dan penanaman pohon."/>
+            </TextBlock>
+
+            <!-- Tombol Jelajahi Lahan (Figma 4:20 + 4:23) -->
+            <Button x:Name="BtnJelajah" Canvas.Left="84" Canvas.Top="428"
+                    Width="234" Height="51" Padding="0" CornerRadius="26"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    Click="BtnJelajah_Click">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="ButtonBackground" Color="#3A7232"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F5E29"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#244A20"/>
+                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <TextBlock Text="Jelajahi Lahan"
+                               FontFamily="{StaticResource FontBlack}" FontSize="22"
+                               VerticalAlignment="Center"/>
+                    <!-- Panah (digambar ulang; SVG asli Figma 4:22 belum bisa diunduh) -->
+                    <Path Data="M1,7.3 H16.9 M10.5,1 L16.9,7.3 L10.5,13.6"
+                          Stroke="White" StrokeThickness="2"
+                          StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+                          Width="18" Height="15" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Kartu statistik (Figma: Rectangle 5 4:24, 1302 x 144, sudut 50) -->
+            <Border x:Name="KartuStatistik" Canvas.Left="69" Canvas.Top="503"
+                    Width="1302" Height="144" CornerRadius="50" Background="White"/>
+
+            <!-- Kolom 1: total pohon -->
+            <Image Source="ms-appx:///Assets/beranda/pohon.png"
+                   Canvas.Left="164" Canvas.Top="538" Width="73" Height="73" Stretch="Fill"/>
+            <TextBlock x:Name="TxtTotalPohon" Canvas.Left="254" Canvas.Top="539" Text="0"
+                       FontFamily="{StaticResource FontIsi}" FontSize="40" FontWeight="ExtraBold"
+                       Foreground="#10352A"/>
+            <TextBlock Canvas.Left="254" Canvas.Top="593" Text="Total Pohon Tertanam"
+                       FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Medium"
+                       Foreground="#5F7A6D"/>
+
+            <!-- Kolom 2: donatur (angka dan keterangan sejajar tengah, sesuai Figma) -->
+            <Image Source="ms-appx:///Assets/beranda/donatur.png"
+                   Canvas.Left="597" Canvas.Top="527" Width="95" Height="95" Stretch="Fill"/>
+            <TextBlock x:Name="TxtDonatur" Canvas.Left="709" Canvas.Top="539" Width="134" Text="0"
+                       TextAlignment="Center"
+                       FontFamily="{StaticResource FontIsi}" FontSize="40" FontWeight="ExtraBold"
+                       Foreground="#10352A"/>
+            <TextBlock Canvas.Left="709" Canvas.Top="593" Width="134" Text="Donatur Peduli"
+                       TextAlignment="Center"
+                       FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Medium"
+                       Foreground="#5F7A6D"/>
+
+            <!-- Kolom 3: wilayah -->
+            <Image Source="ms-appx:///Assets/beranda/daun.png"
+                   Canvas.Left="1024" Canvas.Top="531" Width="88" Height="88" Stretch="Fill"/>
+            <TextBlock x:Name="TxtWilayah" Canvas.Left="1130" Canvas.Top="539" Text="0"
+                       FontFamily="{StaticResource FontIsi}" FontSize="40" FontWeight="ExtraBold"
+                       Foreground="#10352A"/>
+            <TextBlock Canvas.Left="1130" Canvas.Top="593" Text="Wilayah terhijaukan"
+                       FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Medium"
+                       Foreground="#5F7A6D"/>
+
+            <!-- Lahan Unggulan (Figma 4:45, Gotham Black 40) -->
+            <TextBlock Canvas.Left="84" Canvas.Top="684" Text="Lahan Unggulan"
+                       FontFamily="{StaticResource FontBlack}" FontSize="40" Foreground="Black"/>
+
+            <!-- Jumlah slot diisi dari LahanService saat halaman dimuat.
+                 Posisi mengikuti Figma: x = 51, 517, 983; y = 762. -->
+            <controls:LahanCard x:Name="CardJatim" Canvas.Left="51" Canvas.Top="762"
+                                Judul="Jawa Timur" JumlahSlot="0"
+                                Gambar="ms-appx:///Assets/beranda/jawatimur.png"
+                                Dipilih="Card_Dipilih"/>
+            <controls:LahanCard x:Name="CardKalimantan" Canvas.Left="517" Canvas.Top="762"
+                                Judul="Kalimantan" JumlahSlot="0"
+                                Gambar="ms-appx:///Assets/beranda/kalimantan.png"
+                                Dipilih="Card_Dipilih"/>
+            <controls:LahanCard x:Name="CardSumut" Canvas.Left="983" Canvas.Top="762"
+                                Judul="Sumatera Utara" JumlahSlot="0"
+                                Gambar="ms-appx:///Assets/beranda/sumaterautara.png"
+                                Dipilih="Card_Dipilih"/>
+        </Canvas>
+    </Viewbox>
+</Page>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TERRAGENESIS.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:TERRAGENESIS.Controls"
+    Background="White">
+
+    <Page.Resources>
+        <FontFamily x:Key="FontBlack">Segoe UI Black</FontFamily>
+        <FontFamily x:Key="FontIsi">Segoe UI</FontFamily>
+
+        <Style x:Key="KartuRingkasan" TargetType="Border">
+            <Setter Property="Width" Value="309"/>
+            <Setter Property="Height" Value="192"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E3E7E4"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="AngkaRingkasan" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontBlack}"/>
+            <Setter Property="FontSize" Value="44"/>
+            <Setter Property="Foreground" Value="#12352A"/>
+        </Style>
+        <Style x:Key="LabelRingkasan" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontIsi}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="#5F7A6D"/>
+        </Style>
+    </Page.Resources>
+
+    <!-- Kanvas 1440 x 1024 (Figma: Profile 36:118) -->
+    <Viewbox Stretch="Uniform">
+        <Canvas Width="1440" Height="1024" Background="White">
+
+            <controls:SidebarControl Canvas.Left="0" Canvas.Top="0" ActiveMenu="Profile"
+                                     MenuDipilih="Sidebar_MenuDipilih"/>
+
+            <TextBlock x:Name="TxtSapaan" Canvas.Left="467" Canvas.Top="62" Text="Halo!"
+                       FontFamily="{StaticResource FontBlack}" FontSize="64" Foreground="Black"/>
+            <TextBlock Canvas.Left="467" Canvas.Top="152"
+                       Text="Terimakasih telah menjadi bagian dari penghijauan bumi."
+                       FontFamily="{StaticResource FontBlack}" FontSize="20" Foreground="Black"/>
+
+            <!-- Kartu data diri -->
+            <Border Canvas.Left="432" Canvas.Top="249" Width="989" Height="193"
+                    CornerRadius="24" Background="White" BorderBrush="#E3E7E4" BorderThickness="1">
+                <Canvas>
+                    <Ellipse Canvas.Left="70" Canvas.Top="19" Width="154" Height="154">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ms-appx:///Assets/user/pfp.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock x:Name="TxtNama" Canvas.Left="288" Canvas.Top="58" Width="460"
+                               TextTrimming="CharacterEllipsis"
+                               FontFamily="{StaticResource FontBlack}" FontSize="34" Foreground="Black"/>
+                    <TextBlock x:Name="TxtEmail" Canvas.Left="288" Canvas.Top="108" Width="460"
+                               TextTrimming="CharacterEllipsis"
+                               FontFamily="{StaticResource FontIsi}" FontSize="16" Foreground="Black"/>
+
+                    <Button Canvas.Left="764" Canvas.Top="72" Width="196" Height="50"
+                            CornerRadius="14" Padding="0" HorizontalContentAlignment="Center"
+                            Click="EditProfile_Click">
+                        <Button.Resources>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#25442B"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F5636"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1B3320"/>
+                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                        </Button.Resources>
+                        <TextBlock Text="Edit Profile" FontFamily="{StaticResource FontIsi}"
+                                   FontSize="16" FontWeight="Bold"/>
+                    </Button>
+                </Canvas>
+            </Border>
+
+            <TextBlock Canvas.Left="467" Canvas.Top="497" Text="Ringkasan Donasi"
+                       FontFamily="{StaticResource FontBlack}" FontSize="64" Foreground="Black"/>
+
+            <!-- Tiga kartu ringkasan -->
+            <Border Canvas.Left="432" Canvas.Top="645" Style="{StaticResource KartuRingkasan}">
+                <Canvas>
+                    <Image Canvas.Left="38" Canvas.Top="42" Width="100" Height="108"
+                           Source="ms-appx:///Assets/user/treeicon.png" Stretch="Uniform"/>
+                    <TextBlock x:Name="TxtTotalPohon" Canvas.Left="153" Canvas.Top="50" Text="0"
+                               Style="{StaticResource AngkaRingkasan}"/>
+                    <TextBlock Canvas.Left="153" Canvas.Top="128" Text="Total Pohon Dibeli"
+                               Style="{StaticResource LabelRingkasan}"/>
+                </Canvas>
+            </Border>
+            <Border Canvas.Left="775" Canvas.Top="645" Style="{StaticResource KartuRingkasan}">
+                <Canvas>
+                    <Image Canvas.Left="38" Canvas.Top="45" Width="80" Height="100"
+                           Source="ms-appx:///Assets/user/dollaricon.png" Stretch="Uniform"/>
+                    <Viewbox Canvas.Left="133" Canvas.Top="62" Width="160" Height="50"
+                             Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock x:Name="TxtTotalDonasi" Text="Rp 0"
+                                   Style="{StaticResource AngkaRingkasan}" FontSize="34"/>
+                    </Viewbox>
+                    <TextBlock Canvas.Left="133" Canvas.Top="128" Text="Total Donasi"
+                               Style="{StaticResource LabelRingkasan}"/>
+                </Canvas>
+            </Border>
+            <Border Canvas.Left="1112" Canvas.Top="645" Style="{StaticResource KartuRingkasan}">
+                <Canvas>
+                    <Image Canvas.Left="38" Canvas.Top="52" Width="95" Height="90"
+                           Source="ms-appx:///Assets/user/seedicon.png" Stretch="Uniform"/>
+                    <TextBlock x:Name="TxtWilayah" Canvas.Left="153" Canvas.Top="50" Text="0"
+                               Style="{StaticResource AngkaRingkasan}"/>
+                    <TextBlock Canvas.Left="153" Canvas.Top="128" Text="Wilayah dipilih"
+                               Style="{StaticResource LabelRingkasan}"/>
+                </Canvas>
+            </Border>
+        </Canvas>
+    </Viewbox>
+</Page>

@@ -16,6 +16,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Controls\LahanCard.xaml" />
+    <None Remove="Controls\NavbarControl.xaml" />
+    <None Remove="Pages\BerandaPage.xaml" />
     <None Remove="Pages\LoginPage.xaml" />
   </ItemGroup>
 
@@ -29,6 +32,8 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\AppIcon.ico" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <!-- Peta Indonesia untuk halaman Peta wilayah dan Lahan (SVG tidak ikut terbawa otomatis) -->
+    <Content Include="Assets\PetaWilayah\peta.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,9 +65,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Controls\" />
     <Folder Include="Services\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\NavbarControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\LahanCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\BerandaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\LoginPage.xaml">

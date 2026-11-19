@@ -8,7 +8,7 @@ namespace TERRAGENESIS
         public MainWindow()
         {
             InitializeComponent();
-            RootFrame.Navigate(typeof(LoginPage));
+            RootFrame.Navigate(typeof(Pages.LoginPage));
         }
     }
 }

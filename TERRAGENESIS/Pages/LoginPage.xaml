@@ -121,7 +121,8 @@
                         <TextBox x:Name="EmailTextBox" Canvas.Left="127" Canvas.Top="229"
                                  Width="390" Height="26" MinHeight="0" Padding="0"
                                  FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Medium"
-                                 PlaceholderText="Email atau Username" />
+                                 PlaceholderText="Email"
+                                 IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" />
 
                         <!-- Kolom password -->
                         <Border Canvas.Left="34" Canvas.Top="311" Width="516" Height="57"
@@ -132,7 +133,8 @@
                         <PasswordBox x:Name="PasswordInput" Canvas.Left="127" Canvas.Top="327"
                                      Width="350" Height="26" MinHeight="0" Padding="0"
                                      FontFamily="{StaticResource FontIsi}" FontSize="16" FontWeight="Medium"
-                                     PlaceholderText="Password" PasswordRevealMode="Hidden" />
+                                     PlaceholderText="Password" PasswordRevealMode="Hidden"
+                                     KeyDown="PasswordInput_KeyDown" />
                         <Button x:Name="TogglePasswordButton" Canvas.Left="493" Canvas.Top="322"
                                 Width="35" Height="35" Padding="0" Background="Transparent"
                                 BorderThickness="0" Click="TogglePasswordButton_Click">
@@ -185,7 +187,7 @@
                         <!-- Pesan status (tambahan, tidak ada di Figma) -->
                         <TextBlock x:Name="PesanTextBlock" Canvas.Left="34" Canvas.Top="575" Width="516"
                                    TextAlignment="Center" TextWrapping="Wrap"
-                                   FontFamily="{StaticResource FontIsi}" FontSize="14"
+                                   FontFamily="{StaticResource FontIsi}" FontSize="16"
                                    Foreground="#B3261E" />
                     </Canvas>
                 </Border>

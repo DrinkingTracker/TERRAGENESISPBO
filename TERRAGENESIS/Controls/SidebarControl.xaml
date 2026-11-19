@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="TERRAGENESIS.Controls.SidebarControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="410" Height="1024">
+
+    <UserControl.Resources>
+        <!-- Font sementara. Menu di Figma memakai huruf serif tebal. -->
+        <FontFamily x:Key="FontBlack">Segoe UI Black</FontFamily>
+        <FontFamily x:Key="FontMenu">Georgia</FontFamily>
+
+        <!-- Item menu: latar transparan, hijau terang bila aktif (diatur dari code-behind) -->
+        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#1AFFFFFF"/>
+        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#33FFFFFF"/>
+        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+
+        <Style x:Key="ItemMenu" TargetType="Button">
+            <Setter Property="Width" Value="410"/>
+            <Setter Property="Height" Value="107"/>
+            <Setter Property="Padding" Value="40,0,0,0"/>
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="TeksMenu" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontMenu}"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="LineHeight" Value="40"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Canvas Background="#263D2C">
+        <!-- Logo + nama aplikasi, sekaligus jalan kembali ke Beranda -->
+        <Button Canvas.Left="0" Canvas.Top="40" Width="410" Height="95" Padding="0" CornerRadius="0"
+                Tag="Beranda" Click="Menu_Click" AutomationProperties.Name="TERRAGENESIS, ke Beranda">
+            <Canvas Width="410" Height="95">
+                <Image Canvas.Left="10" Canvas.Top="5" Width="105" Height="85" Stretch="Uniform"
+                       Source="ms-appx:///Assets/user/logo.png"/>
+                <TextBlock Canvas.Left="128" Canvas.Top="32" Text="TERRAGENESIS"
+                           FontFamily="{StaticResource FontBlack}" FontSize="29" Foreground="#3FC24A"/>
+            </Canvas>
+        </Button>
+
+        <Button x:Name="MenuProfile" Canvas.Left="0" Canvas.Top="200" Tag="Profile"
+                Style="{StaticResource ItemMenu}" Click="Menu_Click">
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Image Source="ms-appx:///Assets/user/profileicon.png" Width="55" Height="55"/>
+                <TextBlock Text="Profile" Style="{StaticResource TeksMenu}"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="MenuDonasiSaya" Canvas.Left="0" Canvas.Top="375" Tag="Donasi Saya"
+                Style="{StaticResource ItemMenu}" Click="Menu_Click">
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Image Source="ms-appx:///Assets/user/handicon1.png" Width="55" Height="55"/>
+                <TextBlock Text="Donasi Saya" Style="{StaticResource TeksMenu}"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="MenuPenanamanSaya" Canvas.Left="0" Canvas.Top="562" Tag="Penanaman Saya"
+                Style="{StaticResource ItemMenu}" Click="Menu_Click">
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Image Source="ms-appx:///Assets/user/handicon2.png" Width="55" Height="55"/>
+                <TextBlock Style="{StaticResource TeksMenu}">
+                    <Run Text="Penanaman"/><LineBreak/><Run Text="Saya"/>
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="MenuKeluar" Canvas.Left="0" Canvas.Top="762" Tag="Keluar"
+                Style="{StaticResource ItemMenu}" Click="Menu_Click">
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Image Source="ms-appx:///Assets/user/logout.png" Width="55" Height="55"/>
+                <TextBlock Text="Keluar" Style="{StaticResource TeksMenu}"/>
+            </StackPanel>
+        </Button>
+    </Canvas>
+</UserControl>
